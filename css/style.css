@@ -14,6 +14,7 @@
 }
 
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -81,6 +82,7 @@ body {
     align-items: center;
 }
 
+
 .popular-cards .card {
     display: flex;
     margin-top: 33px;
@@ -113,4 +115,111 @@ body {
 
 .popular-cards .card-rating {
     margin-bottom: 5px;
+}
+
+/****** Header ***********/
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 79px; /* header height */
+}
+
+/* Logo adjustment*/
+
+.logo {
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+}
+
+.logo img {
+    height: 19px;          
+    width: auto;
+    display: block;        /* avoid ghost space under the picture */
+}
+
+/* Menu */
+nav {
+    display: flex;
+    gap: 68px;
+    height: 100%; 
+}
+
+/* Menu Links */
+nav a {
+    display: flex;
+    align-items: flex-start; 
+    height: 100%; 
+    padding-top: 20px; 
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Hover (blue line on the desktop) */
+nav a:hover {
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
+}
+
+/****** Search Section ***********/
+.search {
+    margin-top: 30px; /* espaço abaixo do header */
+}
+
+.search h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.search p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex; 
+    align-items: center;
+    height: 49px;
+    border: 1px;
+    border-color: #0065FC;
+    border-radius: 15px 0 0 15px;
+}
+
+.search-icon {
+    background-color: var(--main-bg-color);
+    width: 50px;
+    height: 49px;
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.search-form input {
+    height: 49px;
+    border: none;
+    padding: 0 16px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 180px;
+    outline: none;
+}
+
+.search-form input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.search-button {
+    height: 49px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 15px 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
 }
