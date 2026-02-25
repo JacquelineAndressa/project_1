@@ -164,7 +164,7 @@ nav a:hover {
 
 /****** Search Section ***********/
 .search {
-    margin-top: 30px; /* espaço abaixo do header */
+    margin-top: 30px; 
 }
 
 .search h1 {
@@ -178,12 +178,12 @@ nav a:hover {
 }
 
 .search-form {
-    display: flex; 
+    display: inline-flex; 
     align-items: center;
     height: 49px;
-    border: 1px;
-    border-color: #0065FC;
-    border-radius: 15px 0 0 15px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .search-icon {
@@ -197,6 +197,10 @@ nav a:hover {
     padding: 0;
 }
 
+.search-icon i {
+    color: black;
+}
+
 .search-form input {
     height: 49px;
     border: none;
@@ -205,6 +209,7 @@ nav a:hover {
     font-weight: 700;
     width: 180px;
     outline: none;
+    text-align: center;
 }
 
 .search-form input::placeholder {
