@@ -53,6 +53,7 @@ body {
     color: var(--main-bg-color)
 }
 
+
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
     display: flex;
@@ -70,6 +71,27 @@ body {
 .accommodation {
     width: 65%;
 }
+
+.accommodation-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/******** Accommodation cards ********/
+.accommodation-cards .card img {
+  width: 30%; /* largura total - full width */
+  height: 118px; /* altura fixa - fixed height */
+  border-radius: 20px 20px 0 0; /* cantos de cima - top corners */
+  object-fit: cover; /* corta sem distorcer - cover */
+}
+
+.accommodation-cards .card-content {
+  padding: 0 0px 0px 5px; /* espaçamento interno - inner spacing */
+}
+
+
+
 
 /****** Popular ***********/
 .popular {
@@ -117,7 +139,8 @@ body {
     margin-bottom: 5px;
 }
 
-/****** Header ***********/
+/****** Header ********/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -163,6 +186,7 @@ nav a:hover {
 }
 
 /****** Search Section ***********/
+
 .search {
     margin-top: 30px; 
 }
@@ -174,12 +198,12 @@ nav a:hover {
 
 .search p {
     margin-top: 0;
-    margin-bottom: 20px;
 }
 
 .search-form {
     display: inline-flex; 
     align-items: center;
+    margin: 20px 0;
     height: 49px;
     border: 1px solid #F2F2F2;
     border-radius: 15px;
@@ -228,3 +252,56 @@ nav a:hover {
     font-weight: 700;
     cursor: pointer;
 }
+
+/******** Filters section ********/
+
+.filters {
+  display: flex; /* título + botões na mesma linha - title + buttons on one row */
+  align-items: center;
+  gap: 15px; 
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filters-buttons {
+  display: flex; /* botões lado a lado - buttons side by side */
+  gap: 15px; /* espaço entre botões - space between buttons */
+  flex-wrap: wrap; /* quebra linha se faltar espaço - wrap if needed */
+}
+
+.filter-btn {
+  display: flex; /* ícone + texto alinhados - icon + text aligned */
+  align-items: center;
+  gap: 5px; /* espaço entre ícone e texto - space icon/text */
+  padding: 12px 16px; /* espaço interno - padding */
+  border: 2px solid #d9d9d9; /* borda cinza - gray border */
+  border-radius: 25px; /* arredondado - rounded */
+  background: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #DEEBFF;
+}
+
+.search-info {
+  display: flex; /* ícone + texto - icon + text */
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0 0 0; /* sem empurrar pra esquerda - no left push */
+  width: 100%;
+}
+
+.search-info i {
+  border: 1.5px solid #d9d9d9; /* borda cinza - gray border */
+  border-radius: 25px; /* arredondado - rounded */
+  background-color: transparent;
+  font-size: 12px;
+  padding: 5px 9px;
+}
+
+
+
+ 
