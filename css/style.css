@@ -72,12 +72,6 @@ body {
   width: 65%;
 }
 
-.accommodation-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .accommodation-cards {
   display: flex;
   flex-wrap: wrap;
@@ -177,6 +171,8 @@ body {
 .popular-cards .card-rating {
   margin-bottom: 5px;
 }
+
+/****** Activities *******/
 
 /****** Header ********/
 
