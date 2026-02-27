@@ -81,12 +81,13 @@ body {
 .accommodation-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 33px;
+  gap: 30px;
   margin-top: 33px;
 }
 
 .accommodation-cards .card {
-  width: 29.3%;
+  box-sizing: border-box; /* inclui padding/borda na largura - include padding/border in width */
+  width: calc((100% - 60px) / 3); /* 3 colunas - 3 columns */
 }
 
 .accommodation-cards img {
@@ -94,6 +95,7 @@ body {
   height: 136px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  object-fit: cover;
 }
 
 .accommodation-cards .card-content {
@@ -117,6 +119,18 @@ body {
 
 .accommodation-cards .card-rating {
   margin-bottom: 5px;
+}
+
+.show-more {
+  display: inline-block;
+  margin-top: 30px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+
+.show-more:hover {
+  text-decoration: underline;
 }
 
 /****** Popular ***********/
