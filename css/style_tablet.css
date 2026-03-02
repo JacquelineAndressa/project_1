@@ -1,0 +1,39 @@
+/* ===== TABLET (<=1024px) ===== */
+@media (max-width: 1024px) {
+  .accommodation-and-popular {
+    flex-direction: column; /* stack */
+    gap: 30px;
+  }
+
+  .accommodation,
+  .popular {
+    width: 100%;
+  }
+
+  .popular-cards {
+    display: flex; /* cards lado a lado - side by side */
+    gap: 20px;
+    margin-top: 33px;
+  }
+
+  .popular-cards .card {
+    width: calc((100% - 40px) / 3); /* 3 cards na linha - 3 per row */
+    margin-top: 0; /* remove o margin-top antigo - remove old margin */
+  }
+
+  .popular-cards img {
+    height: 136px;
+  }
+
+  .popular-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* empurra estrelas para baixo */
+  }
+
+  .activities-cards img {
+    width: 100%;
+    height: 200px; /* ajuste ideal para tablet */
+    object-fit: cover; /* evita distorção */
+  }
+}
