@@ -1,5 +1,91 @@
-/****** Header ********/
+/************************************/
+/************* GENERAL **************/
+/************************************/
+* {
+  font-family: "Raleway", sans-serif;
+}
 
+:root {
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fa-solid,
+.fa-regular {
+  color: var(--main-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  max-width: 1440px; /* max width */
+  min-width: 320px; /* min width */
+  margin: 0 auto; /* center */
+}
+
+.section-title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.euro {
+  font-weight: 700;
+}
+
+.neutralStar {
+  color: var(--main-bg-color);
+}
+
+/* Vertical Card liknk */
+.commom-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+/* Horizontal Card liknk */
+.popular-cards .commom-link {
+  display: flex;
+  width: 100%;
+}
+
+/* ID Reference accommodation and activities section */
+#accommodation,
+#activities {
+  scroll-margin-top: 70px;
+}
+
+/************************************/
+/************** Header **************/
+/************************************/
 header {
   display: flex;
   justify-content: space-between;
@@ -44,8 +130,9 @@ nav a:hover {
   border-top: 2px solid var(--main-color);
 }
 
-/****** Search Section ***********/
-
+/************************************/
+/************** Search **************/
+/************************************/
 .search {
   margin: 30px 0;
 }
@@ -113,8 +200,13 @@ nav a:hover {
   cursor: pointer;
 }
 
-/******** Filters section ********/
+.search-button i {
+  display: none;
+}
 
+/************************************/
+/************** Filter **************/
+/************************************/
 .filters {
   display: flex; /* título + botões na mesma linha - title + buttons on one row */
   align-items: center;
@@ -170,66 +262,9 @@ nav a:hover {
   padding: 5px 9px;
 }
 
-/****** General ***********/
-* {
-  font-family: "Raleway", sans-serif;
-}
-
-:root {
-  --main-color: #0065fc;
-  --main-bg-color: #f2f2f2;
-  --filter-bg-color: #deebff;
-}
-
-.fa-solid,
-.fa-regular {
-  color: var(--main-color);
-}
-
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.main-container {
-  width: 100%;
-  padding: 0 50px;
-  box-sizing: border-box;
-  max-width: 1440px; /* max width */
-  min-width: 320px; /* min width */
-  margin: 0 auto; /* center */
-}
-
-.section-title {
-  margin: 0;
-  font-size: 22px;
-}
-
-.card {
-  background-color: white;
-  border-radius: 20px;
-  padding: 5px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.card img {
-  object-fit: cover;
-}
-
-.card-title {
-  font-size: 16px;
-}
-
-.euro {
-  font-weight: 700;
-}
-
-.neutralStar {
-  color: var(--main-bg-color);
-}
-
-/****** Accommodation And Popular ***********/
+/*******************************************************/
+/************** Accommodation And Popular **************/
+/*******************************************************/
 .accommodation-and-popular {
   display: flex;
   justify-content: space-between;
@@ -242,7 +277,9 @@ body {
   box-sizing: border-box;
 }
 
-/****** Accommodation ***********/
+/*******************************************/
+/************** Accommodation **************/
+/*******************************************/
 .accommodation {
   width: 65%;
 }
@@ -261,7 +298,7 @@ body {
 
 .accommodation-cards img {
   width: 100%;
-  height: 136px;
+  height: 115px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
@@ -302,7 +339,9 @@ body {
   text-decoration: underline;
 }
 
-/****** Popular ***********/
+/*************************************/
+/************** Popular **************/
+/*************************************/
 .popular {
   width: 32%;
 }
@@ -314,8 +353,8 @@ body {
 }
 
 .popular-cards .card {
-  display: flex;
   margin-top: 33px;
+  height: calc((100%) / 3);
 }
 
 .popular-cards img {
@@ -347,9 +386,9 @@ body {
   margin-bottom: 5px;
 }
 
-/****** Activities *******/
-
-/******** Activities ********/
+/****************************************/
+/************** Activities **************/
+/****************************************/
 .activities {
   margin-top: 35px; /* espaço acima - top spacing */
   margin-bottom: 35px;
@@ -382,7 +421,9 @@ body {
   font-size: 16px;
 }
 
-/******** Footer ********/
+/************************************/
+/************** Footer **************/
+/************************************/
 .footer {
   background-color: var(--main-bg-color);
   display: flex; /* 3 colunas - 3 columns */

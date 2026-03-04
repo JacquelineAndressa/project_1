@@ -1,4 +1,6 @@
-/* ===== MOBILE (<768px) ===== */
+/********************************************/
+/************* MOBILE (<768px) **************/
+/********************************************/
 @media (max-width: 767px) {
   body {
     margin: 0;
@@ -7,6 +9,7 @@
 
   /* header, */
   .search,
+  .popular,
   .accommodation,
   .activities,
   footer {
@@ -15,6 +18,11 @@
 
   header {
     padding-inline: 0;
+  }
+
+  #accommodation,
+  #activities {
+    scroll-margin-top: 20px;
   }
 
   /* 1) Container com menos padding (mais espaço na tela) */
@@ -84,7 +92,7 @@
   }
 
   .search-button {
-    width: 49px;
+    width: 90px;
     padding: 0;
     border-radius: 15px;
     display: flex;
@@ -93,7 +101,7 @@
   }
 
   .search-icon {
-    width: 50px; /* increase icon container */
+    width: 80px; /* increase icon container */
     height: 49px;
     display: flex;
     align-items: center;
@@ -162,6 +170,7 @@
     width: 100%;
     margin-top: 0; /* remove margin desktop */
     padding: 5px;
+    box-sizing: border-box;
   }
 
   /* PT: imagem ocupa parte esquerda, altura fixa
@@ -266,6 +275,8 @@
 
   .activities {
     box-sizing: border-box;
+    width: 100%;
+    margin: 30px 0;
   }
 
   /* título mais à esquerda (igual mockup) */
@@ -280,15 +291,17 @@
     display: flex;
     flex-direction: column; /* 1 carte par ligne */
     gap: 15px;
-    margin-top: 20px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
   }
 
   .activity-card {
-    width: 100%; /* ✅ prend toute la largeur */
+    width: 100%;
     background: white;
     border-radius: 20px;
-    overflow: hidden; /* pour arrondir l’image */
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
   }
 
   .activity-card img {
