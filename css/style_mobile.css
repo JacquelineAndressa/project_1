@@ -1,3 +1,331 @@
 /* ===== MOBILE (<768px) ===== */
 @media (max-width: 767px) {
+  body {
+    margin: 0;
+    display: block;
+  }
+
+  /* header, */
+  .search,
+  .accommodation,
+  .activities,
+  footer {
+    padding-inline: 20px;
+  }
+
+  header {
+    padding-inline: 0;
+  }
+
+  /* 1) Container com menos padding (mais espaço na tela) */
+  .main-container {
+    padding: 30px 0 0 0;
+    background-color: white;
+  }
+
+  /* 2) Header: logo em cima, nav embaixo */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  /* 3) Nav ocupa a largura toda e fica alinhado */
+  nav {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    gap: 0;
+  }
+
+  nav a {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    padding: 0px 0;
+    border-bottom: 2px solid #f2f2f2;
+  }
+
+  nav a:hover {
+    border-top: none;
+    border-bottom: 2px solid var(--main-color); /* linha azul embaixo */
+  }
+
+  .search {
+    margin-top: 25px; /* prevents pushing up */
+  }
+
+  .search h1 {
+    margin-top: 30px; /* removes extra top margin */
+  }
+
+  .search-form {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .search-form input {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-text {
+    display: none;
+  }
+
+  .search-button i {
+    display: block;
+    color: white;
+    width: 40px;
+  }
+
+  .search-button {
+    width: 49px;
+    padding: 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-icon {
+    width: 50px; /* increase icon container */
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-icon i {
+    font-size: 18px; /* increase icon size */
+  }
+
+  .filters-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas iguais */
+    gap: 15px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+    align-items: center; /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 8px; /* espaço entre ícone e texto */
+    text-align: center;
+  }
+
+  /* 4) Accommodation + Popular empilham */
+
+  .accommodation-and-popular {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .accommodation-and-popular .accommodation {
+    background-color: white;
+  }
+
+  .accommodation-and-popular .popular {
+    background-color: var(--main-bg-color);
+  }
+
+  .accommodation-and-popular section {
+    border-radius: 0;
+  }
+
+  .popular {
+    background: var(--main-bg-color);
+    border-radius: 0;
+  }
+
+  /* EN: Popular cards stacked vertically (one per row) */
+  .popular-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  /* PT: cada card volta a ser horizontal (imagem esquerda, texto direita)
+     EN: each card horizontal again */
+  .popular-cards .card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0; /* remove margin desktop */
+    padding: 5px;
+  }
+
+  /* PT: imagem ocupa parte esquerda, altura fixa
+     EN: image on the left with fixed height */
+  .popular-cards img {
+    width: 35%;
+    height: 146px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+  }
+
+  /* PT: conteúdo ocupa direita e empurra estrelas para baixo
+     EN: content on right, stars pushed to bottom */
+  .popular-cards .card-content {
+    width: 65%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .popular-cards .card-title {
+    margin: 8px 0 6px 0;
+  }
+
+  .popular-cards .card-subtitle {
+    margin: 0;
+  }
+
+  .popular-cards .card-rating {
+    margin-bottom: 5px;
+  }
+
+  .accommodation {
+    order: 2;
+
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .accommodation h2 {
+    margin: 0 0 20px 0;
+    white-space: normal; /* pode deixar quebrar linha se precisar */
+    font-size: 22px;
+  }
+
+  /* PT: Accommodation em coluna (1 por linha)
+   EN: Stack accommodation cards */
+  .accommodation-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0;
+  }
+
+  /* PT: card ocupa 100% da largura
+   EN: card full width */
+  .accommodation-cards .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* força layout vertical */
+    padding: 5px 5px 0px 5px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: white; /* garante fundo branco visível */
+  }
+
+  /* PT: imagem larga horizontal no topo
+   EN: wide horizontal image on top */
+  .accommodation-cards img {
+    width: 100%;
+    height: 100px; /* pode ajustar se quiser mais alta */
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0;
+  }
+
+  /* PT: conteúdo abaixo da imagem
+   EN: content under image */
+  .accommodation-cards .card-content {
+    padding: 10px;
+    padding-top: 3px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* rating aligned left */
+  .accommodation-cards .card-rating {
+    margin-top: 0px;
+  }
+
+  .accommodation-cards .card-title {
+    margin-bottom: 8px;
+  }
+
+  .accommodation-cards .card-subtitle {
+    margin-bottom: 5px;
+  }
+
+  /* cards container activities */
+
+  .activities {
+    box-sizing: border-box;
+  }
+
+  /* título mais à esquerda (igual mockup) */
+  .activities .section-title {
+    margin: 0 0 20px 0;
+    white-space: normal; /* pode deixar quebrar linha se precisar */
+    font-size: 22px;
+  }
+
+  /* cards 1 por linha */
+  .activities-cards {
+    display: flex;
+    flex-direction: column; /* 1 carte par ligne */
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .activity-card {
+    width: 100%; /* ✅ prend toute la largeur */
+    background: white;
+    border-radius: 20px;
+    overflow: hidden; /* pour arrondir l’image */
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  }
+
+  .activity-card img {
+    width: 100%;
+    height: 134px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .activity-title {
+    margin: 0;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column; /* empilha as colunas */
+    gap: 30px; /* espaço entre blocos */
+    padding: 30px 20px; /* respiro igual ao layout */
+  }
+
+  footer .footer-column {
+    width: 100%; /* cada coluna ocupa a largura toda */
+  }
+
+  footer .footer-column ul {
+    padding-left: 0; /* remove padding padrão do ul */
+    margin: 0;
+  }
+
+  footer .footer-column h3 {
+    margin: 0 0 15px 0; /* espaço do título para a lista */
+  }
+
+  footer .footer-column li {
+    margin-bottom: 12px; /* espaçamento entre links */
+  }
 }
