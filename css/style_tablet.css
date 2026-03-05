@@ -38,4 +38,19 @@
     height: 200px; /* ajuste ideal para tablet */
     object-fit: cover; /* evita distorção */
   }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 45px; /* cria espaço entre as colunas (igual sensação do mock) */
+    padding: 30px;
+  }
+
+  .footer-column {
+    flex: 1; /* melhor que width fixa no flex */
+    width: auto; /* sobrescreve o 33.33% do desktop */
+    flex-shrink: 0; /* impede as colunas de “encolherem” e grudarem */
+    min-width: 200px; /* mantém respiro */
+  }
 }
