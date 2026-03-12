@@ -1,4 +1,2 @@
-# booki-starter-pack
-
 This is the repository link : 
 https://github.com/JacquelineAndressa/project_1.git
